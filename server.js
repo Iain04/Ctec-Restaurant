@@ -33,5 +33,4 @@ app.route('/favourite/:id').get(favouriteController.getFavouriteRestaurant);
 app.route('/favourite').post(favouriteController.addFavourite); 
 app.route('/favourite/:id').delete(favouriteController.deleteFavourite);
 
-app.listen(8080, "127.0.0.1"); // start the nodejs to be listening for incoming request @ port 8080
-console.log("web server running @ http://127.0.0.1:8080"); // output to console 
+app.listen(8080, () => console.log("web server running @ https://127.0.0.1:8080"));
