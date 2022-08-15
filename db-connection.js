@@ -24,21 +24,4 @@ connection.connect(err => {  // test out connetion and console.log error if ther
 
 });
 
-var express = require('express');
-var app = express();
-app.route('/mysql').get(fromMYSQL);
-
-
-function fromMYSQL(request, respond){
-
-    var sql = "Select * from restaurants";
-connection.query(sql, function (err,result){
-    console.log(result);
-})
-
-}
-
-app.listen(8080);
-console.log("http://127.0.0.1:8080/mysql%22);
-
-// module.exports = connection;
+module.exports = connection;
