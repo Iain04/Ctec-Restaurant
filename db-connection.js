@@ -38,7 +38,7 @@ connection.query(sql, function (err,result){
 
 }
 
-app.listen(3000);
-console.log("http://127.0.0.1:3000/mysql%22);
+app.listen(8080);
+console.log("http://127.0.0.1:8080/mysql%22);
 
 // module.exports = connection;
