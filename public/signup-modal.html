@@ -1,0 +1,88 @@
+<div class="modal fade modal-signup" id="signup-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="bg-signin-up">
+            <div class="modal-header">
+                <h5 class="modal-title">FoodGasm</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                    <i class="far fa-chevron-left"></i>
+                </button>
+            </div>
+            <div class="container signup-main">
+                <div class="modal-body">
+                    <div class="container signup-body">
+                        <h1 class="text-header">Sign Up</h1>
+                        <form class="form-group needs-validation" novalidate>
+                            <div class="row">
+                                <div class="col-6">
+                                    <input class="form-control file-input" accept="image/*" type="file" name="inpFile" id="profilePic" onchange="showPicPreview()">
+                                    <img class="profilepicpreview" id="profilepicpreview" src="https://avisworldwide.com/wp-content/uploads/2020/05/blank-profile-picture-200x200-1.jpg" alt="image">
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <input class="form-control signup-item" type="text" id="firstName" placeholder="First Name" required>
+                                        <div class="invalid-feedback">
+                                            Please provide your first name.
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <input class="form-control signup-item" type="text" id="lastName" placeholder="Last Name" required>
+                                        <div class="invalid-feedback">
+                                            Please provide your last name.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group signup-item">
+                                <input class="form-control" type="email" id="email" placeholder="Email" required>
+                                <span class="input-group-text input-text" id="email">@gmail.com</span>
+                            </div>
+                            <div class="input-group signup-item">
+                                <input class="form-control" type="text" id="username" placeholder="Username" required>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="input-group signup-item">
+                                        <select class="form-select gender-select" id="gender" required>
+                                            <option selected>Select a gender</option>
+                                            <option value="1">Male</option>
+                                            <option value="2">Female</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select your gender.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control signup-item" type="text" id="contactUser" placeholder="Contact" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a contact.
+                                    </div>
+                                    <input class="form-control signup-item" type="text" id="address" placeholder="Address" required>
+                                    <div class="invalid-feedback">
+                                        Please provide an address.
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <input class="form-control signup-item" type="password" id="password" placeholder="Password" required>
+                                <div class="invalid-feedback">
+                                    Please provide a password.
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-signup" onclick="signupUser()">Sign Up</button>
+                            <button type="button" class="btn btn-close-signup" data-dismiss="modal">Close</button>   
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="container signup-footer">
+                        <div class="row">
+                            <p>Already have an account?<a href="#signin-modal" data-toggle="modal" data-dismiss="modal" data-target="#signin-modal"> Sign In.</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

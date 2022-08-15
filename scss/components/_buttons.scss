@@ -1,0 +1,122 @@
+@use '../custom' as *;
+.btn-rounded{
+    position: relative;
+    padding: 12.8px 19.2px;
+    font-weight: 350;
+    margin: 0;
+    border: 1.6px solid rgba($white, 1);
+    background-color: rgba($white, 1);
+    a {
+        font-weight: 350;
+    }
+}
+
+.btn-empty {
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+    border: 1.6px solid rgba($black, 1);
+    padding: 25px 10px;
+    margin-left: 205px;
+}
+
+.btn-signin {
+    width: fit-content;
+    margin-left: -50px;
+    background-color: $secondary;
+    color: rgba($white, 1);
+    border: none;
+    box-shadow: $box-shadow;
+}
+
+.btn-signin:active {
+    box-shadow: none;
+}
+
+
+.btn-signinwith {
+    background-color: rgba($black, 1);
+    color: rgba($white, 1);
+}
+
+.search-bar-indiv {
+    position:relative;
+    padding: 0;
+    margin-top: 30px; 
+    margin-left: 600px;
+    margin-bottom: 30px;
+
+    button:active, button:hover {
+        box-shadow: $box-shadow;
+    }
+
+    button {
+        background-color: $white;
+        width: 350px;
+        height: 50px;
+        border: 1px solid $white;
+        padding: 1% 6%;
+        margin: 1% 1%;
+        background-image: url(https://img.icons8.com/external-dreamstale-lineal-dreamstale/344/external-search-ui-dreamstale-lineal-dreamstale.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        outline: 0;
+        background-position: 12px;
+        background-size: 16px;
+        box-shadow: $box-shadow;
+    }
+}
+.btn-clear {
+
+    color: $black;
+    text-align: center;
+    
+    .clear-txt {
+        margin-left: 25px;
+    }
+}
+
+.btn-signup {
+    width: fit-content;
+    margin-top: 10px;
+    background-color: $secondary;
+    color: rgba($white, 1);
+    border: none;
+    box-shadow: $box-shadow;
+    border-radius: 0%;
+}
+
+.btn-signin:active {
+    box-shadow: none;
+}
+
+.btn-close-signup {
+    width: fit-content;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: $red;
+    color: rgba($white, 1);
+    border: none;
+    box-shadow: $box-shadow;
+    border-radius: 0%;
+}
+
+.btn-close-signup:active {
+    box-shadow: none;
+}
+
+.btn-edit {
+    border: none;
+}
+
+.btn-edit:active {
+    color: $secondary;
+}
+
+.btn-delete {
+    border: none;
+}
+
+.btn-delete:active {
+    color: $secondary;
+}

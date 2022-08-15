@@ -1,0 +1,283 @@
+@use '../custom' as *;
+
+.search-bar {
+    position:relative; 
+    padding:0; 
+    margin:0;
+
+    input {
+        width: 66%;
+        height: 50px;
+        border: 1px solid $white;
+        padding: 1% 6%;
+        margin: 1% 1%;
+        background-image: url(https://img.icons8.com/external-dreamstale-lineal-dreamstale/344/external-search-ui-dreamstale-lineal-dreamstale.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        outline: 0;
+        background-position: 12px;
+        background-size: 16px;
+        box-shadow: $box-shadow;
+    }
+}
+.main {
+    display: flex;
+    margin-left: 96px;
+}
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.description {
+    margin-top: 50px;
+    width: 700px;
+    align-items: center;
+    justify-content: center;
+}
+.restaurant-filter {
+        margin-left: 96px;
+        margin-right: 96px;
+        
+    .filter {
+        background-color: $white;
+        margin-top: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        box-shadow: $box-shadow;
+
+        h3 {
+            font-weight: 350;
+            font-size: 30px;
+        }
+        .filter-box {
+            background-color: #F6F6F8;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            margin-top: 30px;
+            margin-right: 10px;
+            box-shadow: $box-shadow;
+            border: none;
+            width: 230px;
+            height: 70px;
+
+            h3 {
+                font-size: 20px;
+                font-weight: 350;
+                padding: 10px;
+                margin-top: 5px;
+                margin-left: 10px;
+                width: 95px;
+                height: 25px;
+            }
+            img {
+                margin-left: 65px;
+                margin-top: 10px;
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .filter-box:active {
+            box-shadow: none;
+        }
+    }
+    .search-bar-restaurant {
+        position:relative;
+        padding: 0;
+        margin-top: 30px; 
+        margin-left: 485px;
+        margin-bottom: 10px;
+    
+        input {
+            width: 350px;
+            height: 50px;
+            border: 1px solid $white;
+            padding: 1% 6%;
+            margin: 1% 1%;
+            background-image: url(https://img.icons8.com/external-dreamstale-lineal-dreamstale/344/external-search-ui-dreamstale-lineal-dreamstale.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            outline: 0;
+            background-position: 12px;
+            background-size: 16px;
+            box-shadow: $box-shadow;
+        }
+    }
+}
+.contact-us-main {
+    display: flex;
+    justify-content: start;
+    margin-top: 50px;
+    margin-left: 96px;
+    margin-right: 96px;
+
+    .contact-input {
+        text-align: center;
+        justify-content: center;
+        width: 860px;
+        background-color: $white;
+        h1 {
+            color: $secondary;
+            margin-top: 100px;
+        }
+        .input-small-right {
+            margin-top: 30px;
+            margin-right: 70px;
+            padding: 5px 30px 5px 5px;
+        }
+        .input-small-left {
+            margin-top: 30px;
+            margin-left: 70px;
+            padding: 5px 30px 5px 5px;
+        }
+
+        .input-big {
+            margin-top: 30px;
+            margin-left: 91px;
+            padding-bottom: 130px;
+            width: 485px;
+        }
+        .btn-submit {
+            margin-top: 30px;
+            color: $white;
+            background-color: $secondary;
+            border: none;
+            padding: 8px 70px 8px 70px;
+            font-size: 18px;
+        }
+        .btn-submit:active {
+            border: $black;
+        }
+    }
+    
+}
+
+.individual-main {
+    margin-left: 96px;
+    margin-right: 96px;
+    height: fit-content;
+
+    .about-restaurant {
+        background-color: $white;
+        box-shadow: $box-shadow;
+        margin-top: 10px;
+        height: 98%;
+        justify-content: center;
+        .about-tags {
+            margin-left: -25px;
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+        h3 {
+            padding-top: 20px;
+        }
+        p {
+            font-size: 18px;
+        }
+        .text {
+            font-size: 18px;
+        }
+        .fa-star {
+            color: $yellow;
+        }
+        .fa-dollar-sign {
+            color: $green;
+            margin-left: 5px;
+        }
+        .text-category {
+            background-color: $yellow;
+            border-radius: 25px;
+            padding: 2px 10px 2px 10px;
+        }
+    }
+
+    .iframe-map {
+        background-color: $white;
+        box-shadow: $box-shadow;
+        margin-top: 10px;
+        text-align: left;
+        padding-bottom: 5px;
+        #map {
+            margin-bottom: 5px;
+            margin-left: -24px;
+            padding: 0;
+            width: 540px; 
+            height: 200px;
+        }
+        i {
+            color: red;
+        }
+    }
+    .contact-openinghrs {
+        background-color: $white;
+        box-shadow: $box-shadow;
+        margin-top: 10px;
+        height: fit-content;
+        text-align: left;
+        justify-content: left;
+        padding-bottom: 5px;
+        p {
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .fa-phone {
+            padding-right: 6px;
+        }
+
+        .openinghrs-info{
+            justify-content: left;
+            margin-left: -40px;
+            width: 230px;
+            .text-openinghrs {
+                width: auto;
+            }
+        }
+        
+    }
+}
+.noRestaurants-cell {
+    margin-top: 20px;
+    margin-left: 355px;
+    width: 100%;
+    display:grid; 
+    text-align:center;
+    p {
+        font-size: 20px;
+    }
+}
+.all-reviews {
+    margin-top: 20px;
+    margin-left: 95px;
+    width: 1328px;
+    padding-bottom: 20px;
+    background-color: $white;
+    box-shadow: $box-shadow;
+    h3 {
+        padding-top: 10px;
+        padding-left: 25px;
+    }
+    button {
+        margin-top: 10px;
+        margin-left: 25px;
+        margin-bottom: 10px;
+    }
+}
+.stars-display {
+    display: flex;
+    .star-icon {
+        width: fit-content;
+        color: $yellow;
+    }
+    .price-icon {
+        width: fit-content;
+        color: gray;
+    }
+}
+.form-section {
+    background-color: $white;
+    margin-top: 75px;
+    padding: 30px;
+}

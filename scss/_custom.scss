@@ -1,0 +1,16 @@
+// My theme colours
+$white-bg: #f4f3ef;
+$yellow:  #ffdb58;
+
+$primary: $white-bg;
+$secondary: $yellow;
+
+// Navbar
+
+$navbar-padding-x: 30px;
+$navbar-padding-y: 30px;
+
+// Font
+
+// IMPORT BOOTSTRAP 5
+@import"../node_modules/bootstrap/scss/bootstrap.scss"

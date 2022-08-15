@@ -1,0 +1,37 @@
+<div class="modal fade" id="newReviewModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Post a Review</h3>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body px-5">
+                <form id="reviewForm">
+                    <div class="row stars-display" id="reviewBody">
+                        <label for="star">Rating</label>
+                        <i class="far fa-star star-icon" id="star1" name="star" value="1" onmousedown="rateItStar(this)"></i>
+                        <i class="far fa-star star-icon" id="star2" name="star" value="2" onmousedown="rateItStar(this)"></i>
+                        <i class="far fa-star star-icon" id="star3" name="star" value="3" onmousedown="rateItStar(this)"></i>
+                        <i class="far fa-star star-icon" id="star4" name="star" value="4" onmousedown="rateItStar(this)"></i>
+                        <i class="far fa-star star-icon" id="star5" name="star" value="5" onmousedown="rateItStar(this)"></i>
+                        <br>
+                        <label for="price">Price</label>
+                        <i class="fas fa-dollar-sign price-icon" name="price" value="1" onmousedown="rateItPrice(this)"></i>
+                        <i class="fas fa-dollar-sign price-icon" name="price" value="2" onmousedown="rateItPrice(this)"></i>
+                        <i class="fas fa-dollar-sign price-icon" name="price" value="3" onmousedown="rateItPrice(this)"></i>
+                        <i class="fas fa-dollar-sign price-icon" name="price" value="4" onmousedown="rateItPrice(this)"></i>
+                        <i class="fas fa-dollar-sign price-icon" name="price" value="5" onmousedown="rateItPrice(this)"></i>
+                        <br>
+                        <label for="userComments">Review</label>
+                        <textarea id="userComments" required class="form-control form-rounded" rows="3" cols="100%"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-submitReview" data-dismiss="modal" id="submitReview" onclick="addReview()">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,49 @@
+<div class="modal fade modal-signin" id="signin-modal" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="bg-signin-up">
+            <div class="modal-header">
+                <h5 class="modal-title">FoodGasm</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="container signin-main">
+                <div class="modal-body">
+                    <div class="container signin-body">
+                        <h1>Sign In</h1>
+                        <div class="row">
+                            <input class="modal-item" type="text" name="email" id="emailLogin" placeholder="Email">
+                        </div>
+                        <div class="row">
+                            <input class="modal-item" type="password" name="password" id="passwordLogin" placeholder="Password">
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <a class="modal-item modal-forget">Forget Password</a>
+                            </div>
+                            <div class="col">
+                                <button class="btn-signin modal-item" type="button" onclick="signinUser()">Sign In </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="container signin-footer">
+                        <div class="row">
+                            <button class="btn-signinwith modal-item">
+                                Sign In with <i class="fab fa-facebook"></i>
+                            </button>
+                        </div>
+                        <div class="row">
+                            <button class="btn-signinwith modal-item">
+                                Sign In with <i class="fab fa-google"></i>
+                            </button>
+                        </div>
+                        <div class="row">
+                            <p>Don't have an account?<a href="#signup-modal" data-target="#signup-modal" data-toggle="modal" data-dismiss="modal"> Sign Up.</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

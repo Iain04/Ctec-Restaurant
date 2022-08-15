@@ -1,0 +1,57 @@
+@use '../custom' as *;
+.display-1 {
+    margin-top: 250px;
+    position: relative;
+
+    &--intro {
+        display: inline-block;
+        font-weight: 650;
+        color: $white;
+    }
+
+    &--description {
+        display: inline-block;
+        font-size: 25px;
+        color: $white;
+    }
+}
+
+.display-2 {
+
+    &--tag {
+        display: inline-block;
+        font-weight: 650;
+        font-size: 55px;
+        color: $secondary;
+        text-align: center;
+        padding: 30px 50px 30px 50px;
+        background: rgba(144, 144, 144, 0.55);
+        
+    }
+}
+
+.display-3 {
+
+    position: relative;
+
+
+    &--description {
+        text-align: center;
+        display: inline-block;
+        font-size: 30px;
+        color: $black;
+    }
+}
+
+.display-4 {
+
+    position: relative;
+
+    &--header {
+        text-align: center;
+        display: inline-block;
+        font-size: 40px;
+        font-weight: 500;
+        color: $black;
+    }
+}

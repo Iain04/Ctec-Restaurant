@@ -1,0 +1,26 @@
+{
+  "name": "restaurantreview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "db-connection.js",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "autoprefixer": "^10.4.2",
+    "bcrypt": "^5.0.1",
+    "bootstrap": "^5.1.3",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0"
+  },
+  "devDependencies": {
+    "sass": "^1.48.0"
+  },
+  "scripts": {
+    "compile:sass": "sass --watch scss:public/css",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

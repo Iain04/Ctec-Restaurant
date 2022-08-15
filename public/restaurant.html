@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <title>FoodGasm</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.typekit.net/esn0qkx.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+</head>
+
+<body class="bg-colour" onload="getRestaurantData()">
+    <div class="top-header py-4">
+        <div class="container"></div>
+    </div>
+    <nav class="navbar navbar-expand-lg menu">
+        <div class="container">
+        <a href="index.html" class="navbar-brand brand">FoodGasm</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="restaurant.html" class="nav-link">Restaurants</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+            </ul>
+            <a class="btn rounded-pill btn-rounded" id="signin-btn" data-toggle="modal" href="#signin-modal" role="button">SIGN IN</a>
+            <div class="dropdown" id="dropdown-menu" style="display: none;">
+                <button class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdown-profile" data-toggle="dropdown" aria-expanded="false">
+                    <img class="img-fluid img-profile" id="profile-picture" src="https://avisworldwide.com/wp-content/uploads/2020/05/blank-profile-picture-200x200-1.jpg">
+                    <span id="profile-username">Username</span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item profile-dropdown" id="profile-btn" href="#">Profile</a></li>
+                    <li><a class="dropdown-item fav-dropdown" id="favourite-btn" href="#">Favourites</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item signout-dropdown" id="signout-btn" href="#" onclick="signoutUser()">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>     
+    <section class="restaurant-main">
+        <div class="bg-restaurant">
+        <div class="container banner">
+            <h1 class="display-2">
+                <span class="display-2--tag">
+                    Restaurants
+                </span>
+            </h1>
+        </div>
+    </section>
+    <section class="restaurant-filter">
+        <div class="search-bar-restaurant">
+            <input class="form-control search-input" placeholder="Search Restaurants..." onkeyup="searchRestaurant(this.value)">
+        </div>
+        <h1 class="display-4">
+            <span class="display-4--header">
+                Explore by Category
+            </span>
+        </h1>
+        <div class="container-fluid filter">
+            <h3>Category</h3>
+            <button class="btn-close btn-clear" type="button" aria-label="Close" onclick="getRestaurantCategory('clear')">
+                <span class="clear-txt">Clear</span>
+            </button>
+            <div class="row">
+                <div class="col">
+                    <button class="button filter-box" onclick="getRestaurantCategory('Fast Food')">
+                        <h3>Fast Food</h3>
+                        <img src="https://img.icons8.com/dusk/64/000000/hamburger.png"/>
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="button filter-box" onclick="getRestaurantCategory('Japanese')">
+                        <h3>Japanese</h3>
+                        <img src="https://img.icons8.com/dusk/64/000000/sushi.png"/>
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="button filter-box" onclick="getRestaurantCategory('Mexican')">
+                        <h3>Mexican</h3>
+                        <img src="https://img.icons8.com/dusk/64/000000/taco.png"/>
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="button filter-box" onclick="getRestaurantCategory('Italian')">
+                        <h3>Italian</h3>
+                        <img src="https://img.icons8.com/dusk/64/000000/eights.png"/>
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="button filter-box" onclick="getRestaurantCategory('Indian')">
+                        <h3>Indian</h3>
+                        <img src="https://img.icons8.com/dusk/64/000000/naan.png"/>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="button filter-box" onclick="getRestaurantCategory('Korean')">
+                        <h3>Korean</h3>
+                        <img src="https://img.icons8.com/dusk/64/000000/korean-rice-cake.png"/>
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="button filter-box" onclick="getRestaurantCategory('Chinese')">
+                        <h3>Chinese</h3>
+                        <img src="https://img.icons8.com/dusk/64/000000/dim-sum.png"/>
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="button filter-box" onclick="getRestaurantCategory('French')">
+                        <h3>French</h3>
+                        <img src="https://img.icons8.com/dusk/64/000000/baguette.png"/>
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="button filter-box" onclick="getRestaurantCategory('Western')">
+                        <h3>Western</h3>
+                        <img src="https://img.icons8.com/dusk/64/000000/grill.png"/>
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="button filter-box" onclick="getRestaurantCategory('Vegetarian')">
+                        <h3>Vegetarian</h3>
+                        <img src="https://img.icons8.com/dusk/64/000000/vegan-food.png"/>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container-fluid all-cards">
+        <div id="restaurantsTable" class="row"></div>
+    </div>
+    <div w3-include-html="footer.html"></div>
+    <div w3-include-html="signin-modal.html"></div>
+    <div w3-include-html="signup-modal.html"></div>
+    <div w3-include-html="success-modal.html"></div>
+    <div w3-include-html="fail-modal.html"></div>
+</body>
+
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script>
+    w3.includeHTML();
+</script>
+<script src="js/app.js"></script>
+<script src="js/restaurants.js"></script>
+<script src="js/reviews.js"></script>
+<script src="js/signin.js"></script>
+<script src="js/signup.js"></script>
+<script src="js/checktoken.js"></script>
+<script src="js/signout.js"></script>
+<script src="js/update-nav.js"></script>
+<script src="js/imageinput.js"></script>
+<script src="js/validateForm.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>

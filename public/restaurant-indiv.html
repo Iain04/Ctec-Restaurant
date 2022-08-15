@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <title>FoodGasm</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.typekit.net/esn0qkx.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <script>
+        var map, infoWindow;
+        var token = sessionStorage.getItem("token");
+    </script>
+</head>
+<body class="bg-colour" onload="setRestaurantDetails();showMap()">
+    <div class="top-header py-4">
+        <div class="container"></div>
+    </div>
+    <nav class="navbar navbar-expand-lg menu">
+        <div class="container">
+        <a href="index.html" class="navbar-brand brand">FoodGasm</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="restaurant.html" class="nav-link">Restaurants</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+            </ul>
+            <a class="btn rounded-pill btn-rounded" id="signin-btn" data-toggle="modal" href="#signin-modal" role="button">SIGN IN</a>
+            <div class="dropdown" id="dropdown-menu" style="display: none;">
+                <button class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdown-profile" data-toggle="dropdown" aria-expanded="false">
+                    <img class="img-fluid img-profile" id="profile-picture" src="https://avisworldwide.com/wp-content/uploads/2020/05/blank-profile-picture-200x200-1.jpg">
+                    <span id="profile-username">Username</span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item profile-dropdown" id="profile-btn" href="#">Profile</a></li>
+                    <li><a class="dropdown-item fav-dropdown" id="favourite-btn" href="#">Favourites</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item signout-dropdown" id="signout-btn" href="#" onclick="signoutUser()">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="search-bar-indiv">
+        <button class="button" onclick="window.location.href='restaurant.html'">Search Restaurants...</button>
+    </div>
+    <section class="individual-main">
+        <h3 id="restaurant-name">Restaurant Name</h3>
+        <img class="img-fluid picture-cover" id="restaurant-cover-picture" alt="Restaurant cover picture">
+        <div class="row">
+        <div class="col-7">
+            <div class="container-fluid about-restaurant">
+                <div class="row">
+                    <div class="col">
+                        <h3>About the Restaurant</h3>
+                        <p id="restaurant-desc">Description</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <i class="fas fa-star"></i>
+                        <span class="text" id="rating-restaurant">ratingRestaurant</span>
+                        <br><br>
+                        <i class="fas fa-dollar-sign"></i>
+                        <span class="text" id="price-restaurant">priceRestaurant</span>
+                        <br><br>
+                        <span class="text text-category" id="category-restaurant">category</span>
+                        <br><br>
+                        <span class="text" id="total-reviews">Total Reviews</span>
+                        <span>Reviews</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-5">
+            <div class="container-fluid iframe-map">
+                <div id="map"></div>
+                <br>
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="address-text" id="address-restaurant">Restaurant Address</span>
+            </div>
+            <div class="container-fluid contact-openinghrs">
+                <p>Contact & Information</p>
+                <i class="fas fa-phone"></i>
+                <span id="contact-restaurant">Contact</span>
+                <br>
+                <div class="row">
+                    <div class="col-1">
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <div class="col-1">
+                        <div class="container-fluid openinghrs-info">
+                            <span class="text-openinghrs" id="opening-hours">Opening hours</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-fluid all-reviews">
+            <h3 class="review-title">Reviews</h3>
+            <button type="button" class="btn btn-postReview" id="newReview" data-toggle="modal" data-target="#newReviewModal" data-dismiss="modal" onClick="newReview()" style="display: none;">
+                <i class="fas fa-plus-circle"></i>
+                Post a Review
+            </button>
+            <div id="empty-reviews">No review yet. Create one now</div>
+            <div class="container-fluid" id="review-body"></div>
+        </div>
+    </section>
+    <div w3-include-html="footer.html"></div>
+    <div w3-include-html="signin-modal.html"></div>
+    <div w3-include-html="signup-modal.html"></div>
+    <div w3-include-html="success-modal.html"></div>
+    <div w3-include-html="fail-modal.html"></div>
+    <div w3-include-html="new-review-modal.html"></div>
+    <div w3-include-html="edit-review-modal.html"></div>
+</body>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script>
+    w3.includeHTML();
+</script>
+<script src="js/app.js"></script>
+<script src="js/restaurants.js"></script>
+<script src="js/reviews.js"></script>
+<script src="js/signin.js"></script>
+<script src="js/signup.js"></script>
+<script src="js/checktoken.js"></script>
+<script src="js/signout.js"></script> 
+<script src="js/validateForm.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBri6c_9OYwij6ADqD0oF1UO521wgYHYGM"></script>
+</html>

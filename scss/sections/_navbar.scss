@@ -1,0 +1,40 @@
+@use '../custom' as *;
+.menu {
+    background: $secondary;
+    position: sticky;
+    top: 0;
+    margin-right: 96px;
+    margin-left: 96px;
+    display: relative;
+    z-index: 9;
+    box-shadow: $box-shadow;
+
+    li {
+        padding:0 11.2px;
+    }
+
+    a{
+        color: $black !important;
+        font-weight: 500;
+        
+    }
+
+    .brand {
+        color: $black !important;
+        font-size: 30px;
+    }
+
+    .dropdown {
+
+        .img-profile {
+            border-radius: 100%;
+            width: 40px;
+            height: 40px;
+            margin-right: 5px;
+        }
+    }
+}
+
+.navbar-toggler-icon {
+    order: 1px solid;
+}

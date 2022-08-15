@@ -1,0 +1,26 @@
+@use '../custom' as *;
+footer {
+    margin-top: 100px;
+    background-color: $black;
+    height: fit-content;
+    display: flex;
+
+    h1 {
+        font-size: 35px;
+        color: $white;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+}
+.icon-link {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    color: gray;
+}
+
+.text-tag {
+    text-align: right;
+    margin-top: 10px;
+    color: $white;
+}
