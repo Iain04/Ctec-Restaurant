@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     var request = new XMLHttpRequest();
     
-    request.open("POST", "http://ec2-34-204-223-228.compute-1.amazonaws.com:8080/member", true);
+    request.open("POST", "ec2-54-166-17-19.compute-1.amazonaws.com/member", true);
     request.setRequestHeader("Content-Type","application/json");
     request.onload = function(){
         console.log(request.responseText);
