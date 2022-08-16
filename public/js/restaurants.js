@@ -1,6 +1,6 @@
 function getFeaturedData() {
     var request = new XMLHttpRequest();
-    request.open('GET', 'http://ec2-54-163-18-85.compute-1.amazonaws.com:8080/featured', true);
+    request.open('GET', 'http://ec2-34-204-223-228.compute-1.amazonaws.com:8080/featured', true);
     request.onload = function () {    
         restaurant_array = JSON.parse(request.responseText);    
         console.log(restaurant_array)             	
@@ -11,7 +11,7 @@ function getFeaturedData() {
 
 function getRestaurantData() {
     var request = new XMLHttpRequest();
-    request.open('GET', 'http://ec2-54-163-18-85.compute-1.amazonaws.com:8080/restaurant', true);
+    request.open('GET', 'http://ec2-34-204-223-228.compute-1.amazonaws.com:8080/restaurant', true);
     request.onload = function () {    
         restaurant_array = JSON.parse(request.responseText);
         console.log(restaurant_array)             	
@@ -25,7 +25,7 @@ function searchRestaurant(searchtxt) {
         getRestaurantData();
     }   
     var request = new XMLHttpRequest();
-    request.open('POST', 'http://ec2-54-163-18-85.compute-1.amazonaws.com:8080/search', true);
+    request.open('POST', 'http://ec2-34-204-223-228.compute-1.amazonaws.com:8080/search', true);
     request.setRequestHeader("Content-Type", "application/json");
     request.onload = function () { 
         restaurant_array = JSON.parse(request.responseText);
@@ -40,7 +40,7 @@ function getRestaurantCategory(categorytxt) {
         getRestaurantData();
     } 
     var request = new XMLHttpRequest();
-    request.open('POST', 'http://ec2-54-163-18-85.compute-1.amazonaws.com:8080/category', true);
+    request.open('POST', 'http://ec2-34-204-223-228.compute-1.amazonaws.com:8080/category', true);
     request.setRequestHeader("Content-Type", "application/json");
     request.onload = function () {
         restaurant_array = JSON.parse(request.responseText);
