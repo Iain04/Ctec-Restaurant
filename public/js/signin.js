@@ -1,6 +1,6 @@
 function signinUser() {
     var request =  new XMLHttpRequest();
-    request.open("POST", "http://127.0.0.1:8080/login", true);
+    request.open("POST", "http://ec2-54-163-18-85.compute-1.amazonaws.com:8080/login", true);
     request.setRequestHeader("Content-Type","application/json");
     request.onload = function() {
         $('#signup-modal').modal('hide');
