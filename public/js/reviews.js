@@ -1,7 +1,7 @@
 function fetchReviews() {
     var request = new XMLHttpRequest();
 
-    request.open('GET', "http://ec2-54-163-18-85.compute-1.amazonaws.com:8080/review", true);
+    request.open('GET', "http://ec2-34-204-223-228.compute-1.amazonaws.com:8080/review", true);
 
     request.onload = function () {
         review_array = JSON.parse(request.responseText);
@@ -111,7 +111,7 @@ function addReview() {
 
         var request = new XMLHttpRequest();
 
-        request.open("POST", "http://ec2-54-163-18-85.compute-1.amazonaws.com:8080/review", true); 
+        request.open("POST", "http://ec2-34-204-223-228.compute-1.amazonaws.com:8080/review", true); 
 
         request.setRequestHeader("Content-Type", "application/json");
         request.onload = function () {
@@ -163,7 +163,7 @@ function updateReview() {
     if (sessionStorage.getItem("username") != null) {
         var response = confirm("Are you sure you want to update this review?");
         if (response == true) {
-            var edit_review_url = "http://ec2-54-163-18-85.compute-1.amazonaws.com:8080/review" + "/" + review_array[currentIndex]._id;
+            var edit_review_url = "http://ec2-34-204-223-228.compute-1.amazonaws.com:8080/review" + "/" + review_array[currentIndex]._id;
             var request = new XMLHttpRequest();
             request.open("PUT", edit_review_url, true); 
             request.setRequestHeader("Content-Type", "application/json");
@@ -188,7 +188,7 @@ function deleteReview(element) {
 
         if (response == true) {
             var item = element.getAttribute("item");
-            var delete_review_url = "http://ec2-54-163-18-85.compute-1.amazonaws.com:8080/review" + "/" + review_array[item]._id;
+            var delete_review_url = "http://ec2-34-204-223-228.compute-1.amazonaws.com:8080/review" + "/" + review_array[item]._id;
             var request = new XMLHttpRequest();
             request.open("DELETE", delete_review_url, true);
             request.onload = function() {
