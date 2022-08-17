@@ -8,6 +8,7 @@
     url += "&text=" + encodeURICompnent(elemText.textContent);
     
     const elemAudio = document.createElement("AUDIO");
+    document.body.appendChild(elemAudio);
     elemAudio.controls = true;
     elemAudio.src = url;
     elemAudio.play();
