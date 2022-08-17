@@ -9,5 +9,5 @@ function translateAbout() {
         translatedText = JSON.parse(request.responseText);
         console.log(translatedText);
     };
-    request.send(JSON.stringify({langauge:langauges}));
+    request.send(JSON.stringify({langauge:langauge}));
 }
