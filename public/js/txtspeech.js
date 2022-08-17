@@ -5,7 +5,7 @@
   elemPlayButton.addEventListener("click", function() {
     let url = "https://90sq38y7g7.execute-api.us-east-1.amazonaws.com/default/polly"
     url += "?voice=Joanna";
-    url += "&text=" + encodeURICompnent(elemText.textContent);
+    url += "&text=" + encodeURIComponent(elemText.textContent);
     
     const elemAudio = document.createElement("AUDIO");
     document.body.appendChild(elemAudio);
