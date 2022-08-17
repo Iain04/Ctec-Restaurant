@@ -1,6 +1,6 @@
 function translateAbout() {
-    var langauage = document.getElementById("languages").value;
-    console.log(langauage);
+    var language = document.getElementById("languages").value;
+    console.log(language);
     var request = new XMLHttpRequest();
     request.open("POST", "https://kuobo8gmpf.execute-api.us-east-1.amazonaws.com/default/translate", true); 
     request.setRequestHeader("Content-Type", "application/json");
@@ -9,5 +9,5 @@ function translateAbout() {
         translatedText = JSON.parse(request.responseText);
         console.log(translatedText);
     };
-    request.send(JSON.stringify({langauge:langauge}));
+    request.send(JSON.stringify({language:language}));
 }
