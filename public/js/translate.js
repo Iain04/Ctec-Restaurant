@@ -5,10 +5,9 @@ function translateAbout() {
     request.open("POST", "https://kuobo8gmpf.execute-api.us-east-1.amazonaws.com/default/translate", true); 
     request.setRequestHeader("Content-Type", "application/json");
     request.onload = function () {
-        var payload = {langauge:langauges};
         console.log("translated");
         translatedText = JSON.parse(request.responseText);
         console.log(translatedText);
     };
-    request.send(JSON.stringify(payload));
+    request.send(JSON.stringify({langauge:langauges}));
 }
