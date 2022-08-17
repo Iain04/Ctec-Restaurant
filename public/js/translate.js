@@ -8,7 +8,6 @@ function translateAbout(language) {
     request.onload = function () {
         console.log("translated");
         element.innerHTML = JSON.parse(request.responseText);
-        console.log(translatedText);
     };
     request.send(JSON.stringify({language:language}));
 }
