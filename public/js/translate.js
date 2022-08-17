@@ -1,4 +1,5 @@
 function translateAbout() {
+    console.log("running");
     var langauage = document.getElementById("languages").value;
 
     var request = new XMLHttpRequest();
