@@ -33,5 +33,5 @@ app.route('/favourite/:id').get(favouriteController.getFavouriteRestaurant);
 app.route('/favourite').post(favouriteController.addFavourite); 
 app.route('/favourite/:id').delete(favouriteController.deleteFavourite);
 
-app.listen(8080, "ec2-54-166-17-19.compute-1.amazonaws.com");
-console.log("web server running @ec2-54-166-17-19.compute-1.amazonaws.com:8080")
+app.listen(8080, "ec2-54-236-85-44.compute-1.amazonaws.com");
+console.log("web server running @ec2-54-236-85-44.compute-1.amazonaws.com:8080")
