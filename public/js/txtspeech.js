@@ -2,7 +2,7 @@
   const elemPlayButton = document.querySelector("#play-button")
   const elemText = document.querySelector("#text")
   
-  elemPlayButton.addEvenListener("click", function() {
+  elemPlayButton.addEventListener("click", function() {
     let url = "https://90sq38y7g7.execute-api.us-east-1.amazonaws.com/default/polly"
     url += "?voice=Joanna";
     url += "&text=" + encodeURICompnent(elemText.textContent);
