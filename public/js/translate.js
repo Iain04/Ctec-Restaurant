@@ -1,5 +1,4 @@
-function translateAbout() {
-    var language = document.getElementById("languages").value;
+function translateAbout(language) {
     console.log(language);
     var request = new XMLHttpRequest();
     request.open("POST", "https://kuobo8gmpf.execute-api.us-east-1.amazonaws.com/default/translate", true); 
