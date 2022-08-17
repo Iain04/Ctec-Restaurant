@@ -1,3 +1,5 @@
+const element = document.getElementById("aboutText");
+
 function translateAbout(language) {
     console.log(language);
     var request = new XMLHttpRequest();
@@ -10,3 +12,5 @@ function translateAbout(language) {
     };
     request.send(JSON.stringify({language:language}));
 }
+
+element.innerHTML = translatedText;
