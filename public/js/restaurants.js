@@ -1,6 +1,6 @@
 function getFeaturedData() {
     var request = new XMLHttpRequest();
-    request.open('GET', 'http://ec2-54-236-85-44.compute-1.amazonaws.com/featured', true);
+    request.open('GET', 'http://ec2-54-236-85-44.compute-1.amazonaws.com:8080/featured', true);
     request.onload = function () {    
         restaurant_array = JSON.parse(request.responseText);    
         console.log(restaurant_array)             	
