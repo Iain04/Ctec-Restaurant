@@ -7,9 +7,12 @@ function notification(){
 
     restaurantname = localStorage.getItem("restaurant-name");
     userid = sessionStorage.getItem("idUser");
-    username = sessionStorage.getItem("userName");
+    username = sessionStorage.getItem("username");
     reviewmessage = document.getElementById("userComments").value;
-
+    notification.onload = function () {
+        log = JSON.parse(request.responseText);
+        console.log(log);
+    };
     var payload = {restaurantname:restaurantname,userid:userid,username:username,reviewmessage:reviewmessage};
     console.log(payload)
     notification.send(JSON.stringify(payload));
