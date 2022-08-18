@@ -1,6 +1,7 @@
 const element = document.getElementById("aboutText");
+const language = document.querySelector("#selectLan");
 
-function translateAbout(language) {
+function translateAbout() {
     console.log(language);
     var request = new XMLHttpRequest();
     request.open("POST", "https://kuobo8gmpf.execute-api.us-east-1.amazonaws.com/default/translate", true); 
