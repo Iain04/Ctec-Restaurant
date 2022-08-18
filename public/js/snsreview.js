@@ -10,7 +10,7 @@ function notification(){
     username = sessionStorage.getItem("username");
     reviewmessage = document.getElementById("userComments").value;
     notification.onload = function () {
-        log = JSON.parse(request.responseText);
+        log = JSON.parse(notification.responseText);
         console.log(log);
     };
     var payload = {restaurantname:restaurantname,userid:userid,username:username,reviewmessage:reviewmessage};
