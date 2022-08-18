@@ -17,6 +17,7 @@
     url += "&text=" + encodeURIComponent(elemText.textContent);
     
     const elemAudio = document.createElement("AUDIO");
+    elemAudio.style.display = "none";
     document.body.appendChild(elemAudio);
     elemAudio.controls = true;
     elemAudio.src = url;
